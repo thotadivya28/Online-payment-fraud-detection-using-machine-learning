@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection - Predict</title>
+    <style>
+        body {
+            background-color: #9DE0FC;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .background-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -50%); 
+            width: 600px; 
+            height: 600px;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/002/275/401/large_2x/cyber-security-protection-technology-background-vector.jpg'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center; 
+        }
+
+        form {
+            max-width: 400px; 
+            margin-left: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: none; 
+            border-radius: 2px;
+            font-size: 14px;
+            color: #555;
+            box-sizing: border-box; 
+        }
+
+        ::placeholder {
+            color: #a9a9a9;
+            opacity: 1; 
+        }
+
+     
+        .submit-btn {
+            background-color: #286090;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: #204d74;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-watermark"></div>
+
+    <div class="container">
+        <h1>Online Payments Fraud Detection</h1>
+
+        <form action="/predict" method="POST">
+            
+            <div class="form-group">
+                <label for="step">Step</label>
+                <input type="number" id="step" name="step" placeholder="step: represents a unit of time where 1 step is 1 hour">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type</label>
+                <input type="text" id="type" name="type" placeholder="type of online transaction">
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="the amount of the transaction" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="oldBalanceOrg">OldbalanceOrg</label>
+                <input type="number" id="oldBalanceOrg" name="oldBalanceOrg" placeholder="balance before the transaction" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="newBalanceOrig">NewbalanceOrig</label>
+                <input type="number" id="newBalanceOrig" name="newBalanceOrig" placeholder="balance after the transaction" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="oldBalanceDest">OldbalanceDest</label>
+                <input type="number" id="oldBalanceDest" name="oldBalanceDest" placeholder="initial balance of recipient before the transaction" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="newBalanceDest">NewbalanceDest</label>
+                <input type="number" id="newBalanceDest" name="newBalanceDest" placeholder="the new balance of recipient after the transaction" step="0.01">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

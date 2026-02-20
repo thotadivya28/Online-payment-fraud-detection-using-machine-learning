@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payments Fraud Detection</title>
+    <style>
+        body {
+            background-color: #9DE0FC; 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+            position: relative;
+        }
+        .background-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/002/275/401/large_2x/cyber-security-protection-technology-background-vector.jpg'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.3; 
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+            margin-left: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .btn-home {
+            background-color: #5BC0DE; 
+            border: 1px solid #46b8da;
+        }
+
+        .btn-predict {
+            background-color: #286090;
+            border: 1px solid #204d74;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #444;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-watermark"></div>
+
+    <nav>
+        <a href="/" class="btn btn-home">Home</a>
+        <a href="/predict" class="btn btn-predict">Predict</a>
+    </nav>
+
+    <div class="container">
+        <h1>Online Payments Fraud Detection</h1>
+        
+        <p>
+            The objective of this article is to predict online payments fraud given the various parameters. This will be a classification problem since the target or dependent variable is the fraud(categorical values). The purpose of fraud of online paymetns are to separate the available supply of potable online payments into classes differing in superiority. We will be using classification algorithms such as Decision tree, Random forest, svm, and Extra tree classifier. We will train and test the data with these algorithms
+        </p>
+    </div>
+
+</body>
+</html>
